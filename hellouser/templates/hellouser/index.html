@@ -1,0 +1,14 @@
+{% extends "hellouser/layout.html" %}
+{% block body %}
+        
+        <ul>
+        <h1>
+            {% with name|last as last %}
+            Hello {{ last }}!
+            {% endwith %}
+           
+        </h1>
+            
+        </ul>
+        <a href="{% url 'hellouser:write' %}">Go to previous page</a>
+{% endblock %}
