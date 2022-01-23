@@ -6,9 +6,16 @@
             {% with name|last as last %}
             Hello {{ last }}!
             {% endwith %}
-           
-        </h1>
             
+        </h1>
+        <h2><p>Are you ok?</p></h2>
+        
         </ul>
-        <a href="{% url 'hellouser:write' %}">Go to previous page</a>
+<p>
+        <a href="{% url 'hellouser:write' %}">Go To Write Page</a>
+</p>
+<p>
+    <a href="{% url 'index' %}">Go To Hello Flower Page</a>
+</p>
+        
 {% endblock %}
