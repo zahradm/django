@@ -18,8 +18,16 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import RedirectView
 from django.views import *
+from django.contrib.auth import views as auth_views
+
+from users import views as user_views
+
 urlpatterns = [
     path('', RedirectView.as_view(pattern_name="index")),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('hello/', include("hello.urls")),
-    path('hellouser/', include("hellouser.urls"))]
+    path('hellouser/', include("hellouser.urls")),
+    path('', user_views.home, name='home'),
+    path('register/', user_views.register, name='register'),
+]
