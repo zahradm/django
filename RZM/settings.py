@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+LOGIN_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = '/'
 from pathlib import Path
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-jc7osg(ikw^q1b2$2&=^m+o=nk1la_bowuyni5h_*bb)6*71_*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['130.185.78.201']
 
 
 # Application definition

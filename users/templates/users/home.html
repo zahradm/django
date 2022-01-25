@@ -1,0 +1,20 @@
+{% if user.is_authenticated %}
+<div class="alert alert-success" role="alert">
+    
+    {% if user.username == mahdieh %}
+            <h3>Welcome {{ user.username }}!</h3>
+            <h3>Boooos</h3>
+    {% else %}
+            <h3>Welcome {{ user.username }}!</h3>
+    {% endif %}
+    
+            <a href="{% url 'logout' %}">Logout?</a>
+        </div>
+{% else %}
+    <div class="alert alert-success" role="alert">
+        <h3>Welcome!</h3>
+        <p><a href="{% url 'register' %}">Signup</a></p>
+        <p></p><a href="{% url 'login' %}">Login</a></p>
+        <p></p><a href="{% url 'index' %}">GO To Hello Page</a></p>
+    </div>
+{% endif %}

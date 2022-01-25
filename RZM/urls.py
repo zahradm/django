@@ -23,11 +23,14 @@ from django.contrib.auth import views as auth_views
 from users import views as user_views
 
 urlpatterns = [
-    path('', RedirectView.as_view(pattern_name="index")),
+   
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('hello/', include("hello.urls")),
     path('hellouser/', include("hellouser.urls")),
     path('', user_views.home, name='home'),
     path('register/', user_views.register, name='register'),
+
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
 ]
