@@ -17,3 +17,7 @@ sqlparse==0.4.1
 traitlets==5.0.5
 wcwidth==0.2.5
 django-emoji-picker==0.0.6
+djangorestframework==3.13.1
+django-rest-auth==0.9.5
+django-allauth==0.47.0
+
